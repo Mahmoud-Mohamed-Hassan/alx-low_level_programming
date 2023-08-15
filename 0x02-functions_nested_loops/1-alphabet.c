@@ -1,12 +1,9 @@
 #include "main.h"
 
 /**
- * print_alphabet function
- *
- * Description: A C program that prints with _putchar function
- *
- * Return: no return
- */
+ * print_alphabet - utilizes the _putchar function to print
+ *			the alphabet a - z
+*/
 
 void print_alphabet(void)
 {
