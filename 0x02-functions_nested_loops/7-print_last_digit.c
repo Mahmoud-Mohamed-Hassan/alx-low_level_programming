@@ -5,11 +5,12 @@
  *
  * @n: check input of function
  *
- * Return: return n
+ * Return: return 0 (success)
 */
 
 int print_last_digit(int n)
 {
 	n = n % 10;
-	return (n);
+	_putchar(n);
+	return (0);
 }
