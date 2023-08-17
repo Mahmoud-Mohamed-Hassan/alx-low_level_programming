@@ -15,17 +15,15 @@ int main(void)
 		if ((number % 5 == 0) || (number % 3 == 0))
 			sum += number;
 	}
-				if (sum <= 9)
-				_putchar(number);
-			if (sum <= 99)
-				_putchar(number);
 			if (sum >= 100)
 			{
+				_putchar((sum / 100000) + 48);
+				_putchar((sum / 10000) + 48);
+				_putchar((sum / 1000) + 48);
 				_putchar((sum / 100) + 48);
 				_putchar ((sum / 10) % 10 + 48);
-			} else if (sum <= 99 && sum >= 10)
-				_putchar((sum / 10) + 48);
-			_putchar((sum % 10) + 48);
+				_putchar((sum % 10) + 48);
+			}
 			_putchar('\n');
 		return (0);
 }
