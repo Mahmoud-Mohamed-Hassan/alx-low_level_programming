@@ -10,19 +10,19 @@ void print_times_table(int n)
 
 	if (n <= 15 && n >= 0)
 	{
-		for (number = 0; number <= n; ++number)
+		for (number = 0; number <= n; number++)
 		{
 			_putchar(48);
-		for (mul = 1; mul <= n; ++mul)
+		for (mul = 1; mul <= n; mul++)
 			{
 			_putchar(',');
-			_putchar(' ');
+			_putchar('  ');
 
 			pr = number * mul;
 			if (pr <= 9)
-				_putchar(' ');
+				_putchar('  ');
 			if (pr <= 99)
-				_putchar(' ');
+				_putchar('  ');
 			if (pr >= 100)
 			{
 				putchar((pr / 100) + 48);
