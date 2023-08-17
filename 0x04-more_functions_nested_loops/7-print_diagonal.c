@@ -6,11 +6,11 @@
 
 void print_diagonal(int n)
 {
-	int i, j;
+	int slash, space;
 
-	for (i = 1; i <= n; i++)
+	for (slash = 1; slash <= n; slash++)
 	{
-		for (j = 1; j < i; j++)
+		for (space = 1; space < slash; space++)
 			_putchar(' ');
 		_putchar(92);
 		_putchar('\n');
