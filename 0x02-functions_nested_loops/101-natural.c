@@ -18,9 +18,9 @@ int main(void)
 			if (sum >= 100)
 			{
 				_putchar((sum / 100000) + 48);
-				_putchar((sum / 10000) + 48);
-				_putchar((sum / 1000) + 48);
-				_putchar((sum / 100) + 48);
+				_putchar((sum / 10000) % 10 + 48);
+				_putchar((sum / 1000) % 10 + 48);
+				_putchar((sum / 100) % 10 + 48);
 				_putchar ((sum / 10) % 10 + 48);
 				_putchar((sum % 10) + 48);
 			}
