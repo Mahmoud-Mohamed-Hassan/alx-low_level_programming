@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * reset_to_98 - takes a pointer to int as parameter and
- * update it's value to 98
+ * swap_int - takes a pointer to int as parameter and
+ * swap
  *
  * @a: int parameter
  * @b: int parameter
