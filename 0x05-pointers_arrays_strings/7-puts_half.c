@@ -3,14 +3,14 @@
 /**
  * puts_half - print half string
  *
- * @s: int parameter
+ * @str: int parameter
  *
  * Return: nothing
  */
 
 void puts_half(char *str)
 {
-	int length = 0, temp, i;
+	int length = 0, i;
 
 	while (str[length] != '\0')
 	{
@@ -18,7 +18,7 @@ void puts_half(char *str)
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i >= length / 2 )
+		if (i >= length / 2)
 		_putchar(str[i]);
 	}
 	_putchar('\n');
