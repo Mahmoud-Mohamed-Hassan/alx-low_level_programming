@@ -9,6 +9,6 @@
  */
 char *string_toupper(char *n)
 {
-	_putchar(n + 32);
+	_putchar(n - 32);
 	return (n);
 }
