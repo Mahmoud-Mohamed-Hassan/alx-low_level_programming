@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *string_toupper - change lowercase to upper
+ * *cap_string - change lowercase to upper in each word
  *
  * @n: int parameter
  *
