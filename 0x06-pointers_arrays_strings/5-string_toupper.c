@@ -13,7 +13,7 @@ char *string_toupper(char *n)
 
 	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (n[i] >= 65 && n[i] <= 122)
+		if (n[i] >= 'a' && n[i] <= 'z')
 		n[i] -= 32;
 		else if
 			continue;
