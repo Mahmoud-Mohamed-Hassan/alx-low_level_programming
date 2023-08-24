@@ -10,12 +10,10 @@
 char *cap_string(char *n)
 {
 	int i;
-	char *ptr = n;
 
 	for (i = 0; n[i] != '\0'; i++)
 	{
-		if (i == 0 || n[i] == ' ' || n[i] == '\t' || n[i] == '\n'
-			|| n[i] == '\v' || n[i] == '\f' || n[i] == '\r' || n[i] == '.'
+		if (i == 0 || n[i] == ' ' || n[i] == '\t' || n[i] == '\n' || n[i] == '.'
 			|| n[i] == ';' || n[i] == ',' || n[i] == '?' || n[i] == '!' || n[i] == '('
 			|| n[i] == ')' || n[i] == '{' || n[i] == '}' || n[i] == '"')
 		{
@@ -23,5 +21,5 @@ char *cap_string(char *n)
 			n[i + 1] -= 32;
 		}
 	}
-	return (ptr);
+	return (n);
 }
