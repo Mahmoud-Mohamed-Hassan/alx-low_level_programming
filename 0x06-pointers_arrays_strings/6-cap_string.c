@@ -10,6 +10,7 @@
 char *cap_string(char *n)
 {
 	int i;
+	char *ptr = n;
 
 	for (i = 0; n[i] != '\0'; i++)
 	{
@@ -22,5 +23,5 @@ char *cap_string(char *n)
 			n[i + 1] -= 32;
 		}
 	}
-	return (n);
+	return (ptr);
 }
