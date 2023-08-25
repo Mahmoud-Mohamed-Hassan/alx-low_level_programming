@@ -2,18 +2,18 @@
 
 /**
  * _islower - checks if a character is lowercase
- * @c: character to check
+ * @x: character to check
  * Return: 1 if c is lowercase, 0 otherwise
  */
 
-static int _islower(int c)
+static int _islower(int x)
 {
-	return (c >= 'a' && c <= 'z');
+	return (x >= 'a' && x <= 'z');
 }
 
 /**
  * _isseparator - checks if a character is a separator or not
- * @c: character to check
+ * @x: character to check
  * Return: 1 if c is a separator, 0 otherwise
  */
 
@@ -28,8 +28,8 @@ static int _isseparator(char x)
 
 /**
  * cap_string - capitalizes all words of a string
- * @s: string to capitalize
- * Return: pointer to string s
+ * @n: string to capitalize
+ * Return: pointer to string n
  */
 char *cap_string(char *n)
 {
