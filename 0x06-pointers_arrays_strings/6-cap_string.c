@@ -1,27 +1,42 @@
 #include "main.h"
 
 /**
- * *cap_string - change lowercase to upper in each word
- *
- * @n: int parameter
- *
- * Return: n
+ * _islower - checks if a character is lowercase
+ * @c: character to check
+ * Return: 1 if c is lowercase, 0 otherwise
+ */
+
+static int _islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+
+/**
+ * _isseparator - checks if a character is a separator or not
+ * @c: character to check
+ * Return: 1 if c is a separator, 0 otherwise
+ */
+
+static int _isseparator(char x)
+{
+	return (x == ' ' || x == '\t' || x == '\n' ||
+			x == ',' || x == ';' || x == '.' ||
+			x == '!' || x == '?' || x == '"' ||
+			x == '(' || x == ')' || x == '{' ||
+			x == '}');
+}
+
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: string to capitalize
+ * Return: pointer to string s
  */
 char *cap_string(char *n)
 {
 	int i;
 
-	for (i = 0; n[i] != '\0'; i++)
-	{
-		if (i == 0 || n[i] == ' ' || n[i] == '\t' || n[i] == '\n' || n[i] == '.'
-			|| n[i] == ';' || n[i] == ',' || n[i] == '?' || n[i] == '!' || n[i] == '('
-			|| n[i] == ')' || n[i] == '{' || n[i] == '}' || n[i] == '"')
-		{
-			if (n[0] >= 'a' && n[0] <= 'z')
-				n[0] -= 32;
-			if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
-			n[i + 1] -= 32;
-		}
-	}
+	for (i = 0; n[i]; ++i)
+		if (i == 0 || _isseparator(n[i - 1]))
+			(_islower(n[i])) ? n[i] -= 32 : 0;
 	return (n);
 }
