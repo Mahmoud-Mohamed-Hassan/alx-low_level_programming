@@ -6,20 +6,18 @@
 * @accept: input parameter
 * Return: s or NULL (Success)
 */
-
 char *_strpbrk(char *s, char *accept)
 {
-	while (*s != '\0')
-	{
-		const char *ptr = accept;
+int x;
 
-		while (*ptr != '\0')
-		{
-			if (*s == *ptr)
-				return (s);
-			ptr++;
-		}
-		s++;
+	while (*s)
+	{
+	for (x = 0; accept[x]; x++)
+	{
+	if (*s == accept[x])
+	return (s);
 	}
-	return (NULL);
-}
+	s++;
+	}
+	return ('\0');
+	}
