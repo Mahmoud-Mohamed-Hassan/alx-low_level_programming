@@ -11,9 +11,9 @@ char *_strpbrk(char *s, char *accept)
 {
 	const char *ptr = accept;
 
-	while (*s)
+	while (*s != '\0')
 	{
-		while (*ptr)
+		while (*ptr != '\0')
 		{
 			if (*s == *ptr)
 			{
