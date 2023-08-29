@@ -9,16 +9,14 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	const char *ptr = accept;
-
 	while (*s != '\0')
 	{
+		const char *ptr = accept;
+
 		while (*ptr != '\0')
 		{
 			if (*s == *ptr)
-			{
 				return (s);
-			}
 			ptr++;
 		}
 		s++;
