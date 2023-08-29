@@ -13,7 +13,7 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	int loopCount;
 
-	for (loopCount; n > 0; loopCount++)
+	for (loopCount = 0; n > 0; loopCount++)
 	{
 	s[loopCount] = b;
 	n--;
