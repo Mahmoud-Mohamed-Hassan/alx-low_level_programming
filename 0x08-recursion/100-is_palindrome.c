@@ -3,11 +3,11 @@
  * stringLength - returns the length of a string
  * @s: string to calculate the length of
  *
- * Return: length of the string
+ * Return: length of the string (n)
  */
-int checkPalindrome(char *s, int start, int end, int mod);
 int is_palindrome(char *s);
-int stringLength (char *s)
+
+int stringLength(char *s)
 {
 	int n = 0;
 
@@ -23,13 +23,14 @@ int stringLength (char *s)
  * @mod: modulus
  * Return: 1 if palindrome, 0 if not
  */
+int checkPalindrome(char *s, int start, int end, int mod);
 
 int checkPalindrome(char *s, int start, int end, int mod)
 {
-	if ((start == end && mod != 0) || (start == end + 1 && mod ==0))
+	if ((start == end && mod != 0) || (start == end + 1 && mod == 0))
 		return (1);
 	else if (s[start] != s[end])
-		return(0);
+		return (0);
 	else
 		return (checkPalindrome(s, start + 1, end - 1, mod));
 }
@@ -42,6 +43,7 @@ int checkPalindrome(char *s, int start, int end, int mod)
 
 int is_palindrome(char *s)
 {
-	end = stringLength(s);
-	return(checkPalindrome(s, 0, end - 1, end % 2 ));
+	int end = stringLength(s);
+
+	return (checkPalindrome(s, 0, end - 1, end % 2));
 }
