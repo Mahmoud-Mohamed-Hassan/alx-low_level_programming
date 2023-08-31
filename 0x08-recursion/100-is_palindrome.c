@@ -11,7 +11,7 @@ int stringLength(char *s)
 {
 	int n = 0;
 
-	if (s > '\0')
+	if (*s > '\0')
 		n += stringLength(s + 1) + 1;
 	return (n);
 }
