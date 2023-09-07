@@ -36,11 +36,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (x < lenS1)
 		{
-			t[x] = s1[x];
+			m[x] = s1[x];
 		}
 		else
 		{
-			t[x] = s2[x - lenS1];
+			m[x] = s2[x - lenS1];
 		}
 	}
 	*(m + x) = '\0';
