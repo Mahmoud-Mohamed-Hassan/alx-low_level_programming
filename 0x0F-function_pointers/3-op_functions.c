@@ -1,28 +1,61 @@
 #include "3-calc.h"
 /**
- * get_op_func - a func that gets operator function
- * @s: operator
+ * op_add - adds
+ * @a: int
+ * @b: int
  * Return: result
 */
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-	{"+", op_add},
-	{"-", op_sub},
-	{"*", op_mul},
-	{"/", op_div},
-	{"%", op_mod},
-	{NULL, NULL}
-	};
-
-	int x;
-
-	x = 0;
-	while (x < 5)
+	return (a + b);
+}
+/**
+ * op_sub - subs
+ * @a: int
+ * @b: int
+ * Return: result
+*/
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
+ * op_mul - adds
+ * @a: int
+ * @b: int
+ * Return: result
+*/
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+/**
+ * op_div - adds
+ * @a: int
+ * @b: int
+ * Return: result
+*/
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-		if (strcmp(ops[x].op, s) == 0)
-			return (ops[x].f);
-		x++;
+		printf("Error\n");
+		exit(100);
 	}
-	return (NULL);
+	return (a / b);
+}
+/**
+ * op_mod - adds
+ * @a: int
+ * @b: int
+ * Return: result
+*/
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
