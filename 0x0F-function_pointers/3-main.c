@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	printf("%d\n", operationx(first_oper, second_oper));
+	printf("%d\n", operationx(first_op, second_op));
 	return (0);
 }
