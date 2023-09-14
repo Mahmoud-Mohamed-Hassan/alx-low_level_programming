@@ -13,19 +13,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int x;
 	va_list list;
-    char *ptr;
+	char *ptr;
 
-    va_start(list, n);
-    for (x = 0; x < n; x++)
+	va_start(list, n);
+	for (x = 0; x < n; x++)
 	{
-        ptr = va_arg(list, char*);
-        if (ptr != NULL)
-            printf("%s", ptr);
-        else
-            printf("(nil)");
-
-		if (x < (n - 1) && separator)
-			printf("%s", separator);
+	ptr = va_arg(list, char*);
+	if (ptr != NULL)
+	printf("%s", ptr);
+	else
+	printf("(nil)");
+	if (x < (n - 1) && separator)
+		printf("%s", separator);
 	}
 	printf("\n");
 	va_end(list);
