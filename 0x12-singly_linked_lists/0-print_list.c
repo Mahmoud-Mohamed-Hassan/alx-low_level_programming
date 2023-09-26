@@ -7,6 +7,7 @@
  *
  * Return: the number of nodes printed
  */
+
 size_t print_list(const list_t *list)
 {
 	size_t nodes = 0;
